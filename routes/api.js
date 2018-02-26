@@ -1,6 +1,7 @@
 var express = require('express');
-var router = express.Router();
 var restful = require('node-restful');
+
+var router = express.Router();
 
 var user = require('../models/user');
 var period = require('../models/period');
@@ -19,16 +20,13 @@ work = restful.model('work', work);
 address = restful.model('address', address);
 
 // Routes
-user.methods(['get', 'put', 'post', 'delete']);
+user.methods(['get','post','delete']);
 user.register(router, '/user');
-
-period.methods(['get', 'put', 'post', 'delete']);
-period.register(router, '/period');
 
 jnvAssociation.methods(['get', 'put', 'post', 'delete']);
 jnvAssociation.register(router, '/jnvAssociation');
 
-jnv.methods(['get', 'put', 'post', 'delete']);
+jnv.methods(['get','post', 'delete']);
 jnv.register(router, '/jnv');
 
 education.methods(['get', 'put', 'post', 'delete']);

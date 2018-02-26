@@ -1,12 +1,12 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
 var jnv = require('./jnv');
-var period = require('./period')
+var period = require('./period');
 
 var jnvAssociation = new mongoose.Schema({
-    role : String,
-    jnv : jnv,
-    duration: period
+    role : { type: String, required: true},
+    jnv : { type: mongoose.Schema.Types.ObjectId, required: true},
+    duration: { type: period, required: true}
 });
 
 module.exports = jnvAssociation;

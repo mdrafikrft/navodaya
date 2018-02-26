@@ -2,8 +2,8 @@ var restful = require('node-restful');
 var mongoose = restful.mongoose;
 
 var period = new mongoose.Schema({
-    from: Date,
-    to: Date
+    from: { type:Date, required: true},
+    to: { type:Date, required: true}
 });
 
 

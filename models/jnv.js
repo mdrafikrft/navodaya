@@ -5,8 +5,9 @@ var address = require('./address');
 var period = require('./period');
 
 var jnv = new mongoose.Schema({
-    place : address,
-    duration : period
+    place : { type:address, required: true},
+    duration: { type: period, required: true},
+    associatedUsers :[mongoose.Schema.Types.ObjectId]
 });
 
 module.exports = jnv;

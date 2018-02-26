@@ -5,10 +5,10 @@ var period = require('./period');
 
 
 var education = new mongoose.Schema({
-    course : String,
-    school : String,
-    place : address,
-    duration: period
+    course : { type: String, required: true},
+    school : { type:String, required: true},
+    place : { type: address, required: true},
+    duration: { type: period,required: true}
 });
 
 

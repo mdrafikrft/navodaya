@@ -4,11 +4,11 @@ var address = require('./address');
 var period = require('./period');
 
 var work = new mongoose.Schema({
-    position: String,
-    industry: String,
-    company : String,
-    place : address,
-    duration : period
+    position: { type: String, required: true},
+    industry: { type: String, required: true},
+    company : { type: String, required: true},
+    place : { type: address, required: true},
+    duration: { type: period,required: true}
 });
 
 module.exports = work;

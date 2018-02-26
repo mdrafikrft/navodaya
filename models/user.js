@@ -1,5 +1,6 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
+
 var address = require('./address');
 var work = require('./work');
 var education = require('./education');
@@ -11,6 +12,7 @@ var user = new mongoose.Schema({
     fatherName: { type: String,required: true},
     motherName: { type: String,required: true},
     dateOfBirth: { type: Date,required: true},
+    primaryId : {type: String, required: true},
     addresses: { type:[address]},
     emails: { type:[String]},
     works : { type:[work]},

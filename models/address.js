@@ -2,11 +2,11 @@ var restful = require('node-restful');
 var mongoose = restful.mongoose;
 
 var address = new mongoose.Schema({
-    street: String,
-    town: String,
-    city: String,
-    state: String,
-    country: String
+    street: { type: String, required: true},
+    town: { type: String, required: true},
+    city: { type: String, required: true},
+    state: { type: String, required: true},
+    country: { type: String, required: true}
 });
 
 
