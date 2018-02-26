@@ -1,7 +1,7 @@
 # User
 
 | Method | url | description |
-|----------|:-------------:|------:|
+|:----------|:-------------|:------|
 |   get     |   /api/user                     | list all users                                          |
 |   get     |   /api/user/id                  | get details of user with id                             |
 |   post    |   /api/user                     | add user                                                |
